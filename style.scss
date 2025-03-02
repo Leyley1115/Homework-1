@@ -20,6 +20,13 @@ a{
     flex-direction: column;
     height: 800px;
     background-color: rgba(225, 255, 143, 1);
+    background-image: url(img/stars/star_group.svg), url(img/stars/Star\ 2.svg), url(img/stars/Star\ 3.svg), url(img/stars/Star\ 4.svg), url(img/stars/Star\ 5.svg);
+    background-position: 53vw -333px,
+    4vw 94px, 
+    10.8vw 69px,
+    70.3vw 568px,
+    65.8vw 538px;
+    background-repeat: no-repeat;
 
     &__box{
         padding-top: 196px;
@@ -86,7 +93,8 @@ a{
 
 .main{
     background-color: rgba(32, 32, 39, 1);
-    
+    padding-top: 94px;
+
     &-tittle{
         color: white;
         font-weight: 700;
@@ -106,7 +114,12 @@ a{
 }
 
 .about{
-    padding: 94px 0px 50px 0px;
+    margin-bottom: 96px;
+    background-image: url(img/stars/Star\ 1.svg), url(img/stars/Star\ 11.svg), url(img/stars/Star\ 12.svg);
+    background-repeat: no-repeat;
+    background-position: 68vw 0px,
+    1.7vw 770px,
+    2.8vw 822px;
 
     &__menu{
         display: grid;
@@ -121,7 +134,7 @@ a{
     border-radius: 30px;
 
     img{
-        width: 378;
+        max-width: 378px;
         height: 314px;
     }
 
@@ -156,6 +169,7 @@ a{
 }
 
 .img{
+    width: ma;
     border-radius: 30px;
 
     &_purp{
@@ -179,11 +193,21 @@ a{
     }
 }
 
+.game-select{
+    background-image: url(img/stars/Star\ 6.svg), url(img/stars/Star\ 7.svg), url(img/stars/Star\ 8.svg), url(img/stars/Star\ 10.svg);
+    background-repeat: no-repeat;
+    background-position: 91vw 80px,
+    88.7vw 47px,
+    right 52px bottom 65px,
+    right 150px bottom 45px;
+}
+
 .mini-games{
     display: flex;
     flex-direction: column;
     gap: 32px;
     padding-bottom: 144px;
+    margin-top: 48px;
 
     & img{
         width: 600px;
