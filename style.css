@@ -4,6 +4,10 @@
   font-family: Montserrat, sans-serif;
 }
 
+html {
+  font-size: 24px;
+}
+
 a {
   text-decoration: none;
   display: flex;
@@ -21,7 +25,7 @@ a {
   height: 800px;
   background-color: rgb(225, 255, 143);
   background-image: url(img/stars/star_group.svg), url(img/stars/Star\ 2.svg), url(img/stars/Star\ 3.svg), url(img/stars/Star\ 4.svg), url(img/stars/Star\ 5.svg);
-  background-position: 53vw -333px, 4vw 94px, 10.8vw 69px, 70.3vw 568px, 65.8vw 538px;
+  background-position: 60vw -334px, 4vw 94px, 10.8vw 69px, 70.3vw 568px, 65.8vw 538px;
   background-repeat: no-repeat;
 }
 .header__box {
@@ -30,11 +34,11 @@ a {
 }
 .header__tittle {
   font-weight: 700;
-  font-size: 64px;
+  font-size: 2.6rem;
   margin-bottom: 24px;
 }
 .header__subtittle {
-  font-size: 24px;
+  font-size: 1rem;
   padding-bottom: 48px;
 }
 .header__subtittle span {
@@ -67,15 +71,19 @@ a {
   width: 247px;
   height: 66px;
   border-radius: 60px;
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 600;
   color: white;
   background-color: black;
+  transition-duration: 0.3s;
 }
 .standart-button:hover {
   color: black;
   background-color: #fff;
-  transition-duration: 0.3s;
+}
+.standart-button__link {
+  width: -moz-max-content;
+  width: max-content;
 }
 
 .main {
@@ -85,13 +93,13 @@ a {
 .main-tittle {
   color: white;
   font-weight: 700;
-  font-size: 64px;
+  font-size: 2.6rem;
   padding-bottom: 24px;
 }
 .main-subtittle {
-  width: 788px;
+  max-width: 788px;
   line-height: 32px;
-  font-size: 24px;
+  font-size: 1rem;
   color: white;
   white-space: inherit;
   padding-bottom: 72px;
@@ -105,22 +113,26 @@ a {
 }
 .about__menu {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+  justify-items: center;
   gap: 32px;
+}
+.about__menu a {
+  grid-column: span 4;
 }
 
 .about-card {
-  grid-column: span 4;
   background-color: white;
   border-radius: 30px;
+  transition-duration: 0.3s;
+  max-width: 376px;
 }
 .about-card img {
-  max-width: 378px;
+  max-width: 100%;
   height: 314px;
 }
 .about-card:hover {
-  transform: scale(1.15);
-  transition-duration: 0.3s;
+  transform: scale(1.1);
 }
 .about-card__content {
   display: flex;
@@ -146,7 +158,6 @@ a {
 }
 
 .img {
-  width: ma;
   border-radius: 30px;
 }
 .img_purp {
@@ -179,7 +190,7 @@ a {
   margin-top: 48px;
 }
 .mini-games img {
-  width: 600px;
+  max-width: 600px;
   height: 500px;
 }
 .mini-games__card {
@@ -195,7 +206,7 @@ a {
 }
 .mini-games__content {
   padding: 48px;
-  width: 457px;
+  max-width: 457px;
 }
 .mini-games__content h3 {
   font-size: 48px;
@@ -204,8 +215,8 @@ a {
   color: black;
 }
 .mini-games__content p {
-  font-size: 24px;
-  width: 457px;
+  font-size: 1rem;
+  max-width: 457px;
   padding-bottom: 36px;
   color: black;
 }
@@ -218,6 +229,6 @@ footer {
   align-items: center;
 }
 footer h3 {
-  font-size: 24px;
+  font-size: 1rem;
   font-weight: 600;
 }/*# sourceMappingURL=style.css.map */

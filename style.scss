@@ -4,6 +4,10 @@
     font-family: Montserrat, sans-serif;
 }
 
+html{
+    font-size: 24px;
+}
+
 a{
     text-decoration: none;
     display: flex;
@@ -21,7 +25,7 @@ a{
     height: 800px;
     background-color: rgba(225, 255, 143, 1);
     background-image: url(img/stars/star_group.svg), url(img/stars/Star\ 2.svg), url(img/stars/Star\ 3.svg), url(img/stars/Star\ 4.svg), url(img/stars/Star\ 5.svg);
-    background-position: 53vw -333px,
+    background-position: 60vw -334px,
     4vw 94px, 
     10.8vw 69px,
     70.3vw 568px,
@@ -35,12 +39,12 @@ a{
 
     &__tittle{
         font-weight: 700;
-        font-size: 64px;
+        font-size: 2.6rem;
         margin-bottom: 24px;
     }
 
     &__subtittle{
-        font-size: 24px;
+        font-size: 1rem;
         padding-bottom: 48px;
 
         & span{
@@ -79,15 +83,19 @@ a{
     width: 247px;
     height: 66px;
     border-radius: 60px;
-    font-size: 24px;
+    font-size: 1rem;
     font-weight: 600;
     color: white;
     background-color: black;
+    transition-duration: 0.3s;
 
     &:hover{
         color: black;
         background-color: #fff;
-        transition-duration: 0.3s;
+    }
+
+    &__link{
+        width: max-content;
     }
 }
 
@@ -98,14 +106,14 @@ a{
     &-tittle{
         color: white;
         font-weight: 700;
-        font-size: 64px;
+        font-size: 2.6rem;
         padding-bottom: 24px;
     }
 
     &-subtittle{
-        width: 788px;
+        max-width: 788px;
         line-height: 32px;
-        font-size: 24px;
+        font-size: 1rem;
         color: white;
         white-space: inherit;
         padding-bottom: 72px;
@@ -123,24 +131,30 @@ a{
 
     &__menu{
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));;
+        justify-items: center;
         gap: 32px;
+
+        & a{
+            grid-column: span 4;
+        }
+    
     }
 }
 
 .about-card{
-    grid-column: span 4;
     background-color: white;
     border-radius: 30px;
+    transition-duration: 0.3s;
+    max-width: 376px;
 
     img{
-        max-width: 378px;
+        max-width: 100%;
         height: 314px;
     }
 
     &:hover{
-        transform: scale(1.15);
-        transition-duration: 0.3s;
+        transform: scale(1.1);
     }
 
     &__content{
@@ -169,7 +183,6 @@ a{
 }
 
 .img{
-    width: ma;
     border-radius: 30px;
 
     &_purp{
@@ -210,7 +223,7 @@ a{
     margin-top: 48px;
 
     & img{
-        width: 600px;
+        max-width: 600px;
         height: 500px;
 
     }
@@ -230,7 +243,7 @@ a{
 
     &__content{
         padding: 48px;
-        width: 457px;
+        max-width: 457px;
 
         & h3{
             font-size: 48px;
@@ -240,8 +253,8 @@ a{
         }
 
         & p{
-            font-size: 24px;
-            width: 457px;
+            font-size: 1rem;
+            max-width: 457px;
             padding-bottom: 36px;
             color: black; 
         }
@@ -256,7 +269,7 @@ footer{
     align-items: center;
 
     & h3{
-        font-size: 24px;
+        font-size: 1rem;
         font-weight: 600;
     }
 }
