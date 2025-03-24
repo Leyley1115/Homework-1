@@ -1,0 +1,79 @@
+@media(max-width: 767px){
+
+    .center{
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .header__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header__title{
+        max-width: 262px;
+        font-size: 1.67rem;
+        text-align: center;
+    }
+
+    .header__subtitle{
+        font-size: 0.67rem;
+        text-align:center;
+        width: 296px;
+    }
+
+    .main{
+        padding-top: 48px;
+
+        &-title{
+            font-size: 1.67rem;
+            padding-bottom: 0;
+        }
+    }
+
+    .about{
+        display: none;
+    }
+
+    .mini-games__card{
+        background-color: white;
+        border-radius: 30px;
+        max-width: 343px;
+        flex-direction: column;
+        height: max-content;
+        padding: 0;
+
+        &__content{
+            max-width: 284px;
+        }
+
+        & img{
+            max-width: 343px;
+            max-height: 284px;
+        }
+        &:nth-child(2n){
+            flex-direction: column;
+        }
+    }
+
+    .mini-games__content{
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+
+        & h3{
+            font-size: 1.33rem;
+        }
+
+        & p{
+            font-size: 0.67rem;
+            max-width: 285px;
+        }
+    }
+
+    .standart-button{
+        font-size: 0.67rem;
+    }
+
+}

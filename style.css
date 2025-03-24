@@ -32,16 +32,16 @@ a {
   padding-top: 196px;
   width: 769px;
 }
-.header__tittle {
+.header__title {
   font-weight: 700;
   font-size: 2.6rem;
   margin-bottom: 24px;
 }
-.header__subtittle {
+.header__subtitle {
   font-size: 1rem;
   padding-bottom: 48px;
 }
-.header__subtittle span {
+.header__subtitle span {
   font-weight: 600;
 }
 .header__topics {
@@ -90,13 +90,13 @@ a {
   background-color: rgb(32, 32, 39);
   padding-top: 94px;
 }
-.main-tittle {
+.main-title {
   color: white;
   font-weight: 700;
   font-size: 2.6rem;
   padding-bottom: 24px;
 }
-.main-subtittle {
+.main-subtitle {
   max-width: 788px;
   line-height: 32px;
   font-size: 1rem;
@@ -116,6 +116,7 @@ a {
   grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
   justify-items: center;
   gap: 32px;
+  align-items: start;
 }
 .about__menu a {
   grid-column: span 4;
@@ -231,4 +232,70 @@ footer {
 footer h3 {
   font-size: 1rem;
   font-weight: 600;
+}
+
+@media (max-width: 767px) {
+  .center {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
+  .header__box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .header__title {
+    max-width: 262px;
+    font-size: 1.67rem;
+    text-align: center;
+  }
+  .header__subtitle {
+    font-size: 0.67rem;
+    text-align: center;
+    width: 296px;
+  }
+  .main {
+    padding-top: 48px;
+  }
+  .main-title {
+    font-size: 1.67rem;
+    padding-bottom: 0;
+  }
+  .about {
+    display: none;
+  }
+  .mini-games__card {
+    background-color: white;
+    border-radius: 30px;
+    max-width: 343px;
+    flex-direction: column;
+    height: -moz-max-content;
+    height: max-content;
+    padding: 0;
+  }
+  .mini-games__card__content {
+    max-width: 284px;
+  }
+  .mini-games__card img {
+    max-width: 343px;
+    max-height: 284px;
+  }
+  .mini-games__card:nth-child(2n) {
+    flex-direction: column;
+  }
+  .mini-games__content {
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+  }
+  .mini-games__content h3 {
+    font-size: 1.33rem;
+  }
+  .mini-games__content p {
+    font-size: 0.67rem;
+    max-width: 285px;
+  }
+  .standart-button {
+    font-size: 0.67rem;
+  }
 }/*# sourceMappingURL=style.css.map */
