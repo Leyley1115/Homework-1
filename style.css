@@ -240,9 +240,13 @@ footer h3 {
     padding-right: 16px;
   }
   .header__box {
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-left: 0;
+    padding-top: 147px;
+    padding-bottom: 182px;
   }
   .header__title {
     max-width: 262px;
@@ -263,6 +267,10 @@ footer h3 {
   }
   .about {
     display: none;
+  }
+  .mini-games {
+    align-items: center;
+    padding-bottom: 48px;
   }
   .mini-games__card {
     background-color: white;

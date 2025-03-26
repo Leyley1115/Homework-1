@@ -6,9 +6,13 @@
     }
 
     .header__box{
+        width: 100%;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-left: 0;
+        padding-top: 147px;
+        padding-bottom: 182px;
     }
     
     .header__title{
@@ -34,6 +38,11 @@
 
     .about{
         display: none;
+    }
+
+    .mini-games{
+        align-items: center;
+        padding-bottom: 48px;
     }
 
     .mini-games__card{
