@@ -141,13 +141,13 @@ a{
         & a{
             grid-column: span 4;
         }
-
-        & div{
-            display: flex;
-            flex-direction: column;
-            gap: 32px;
-        }
     }
+}
+
+.cards{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
 }
 
 .about-card{
@@ -238,6 +238,7 @@ a{
 
     &__card{
         display: flex;
+        justify-content: space-between;
         height: 500px;
         background-color: rgba(247, 247, 247, 1);
         border-radius: 30px;
