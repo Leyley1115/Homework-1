@@ -212,21 +212,21 @@ a {
 }
 .mini-games__card:nth-child(2n) {
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: flex-start;
 }
 .mini-games__content {
-  padding: 48px;
-  max-width: 457px;
+  padding: 48px 0 0 48px;
 }
 .mini-games__content h3 {
+  max-width: 457px;
   font-size: 48px;
   font-weight: 700;
   padding-bottom: 24px;
   color: black;
 }
 .mini-games__content p {
+  max-width: 497px;
   font-size: 1rem;
-  max-width: 457px;
   padding-bottom: 36px;
   color: black;
 }
