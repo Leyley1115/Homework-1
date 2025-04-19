@@ -1,8 +1,23 @@
 @media(max-width: 767px){
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
+      }
 
     .center{
         padding-left: 16px;
         padding-right: 16px;
+    }
+
+    .header{
+        background-image: url(img/stars/mobile_star.svg), url(img/stars/Star\ 2.svg), url(img/stars/Star\ 3.svg), url(img/stars/Star\ 4.svg), url(img/stars/Star\ 5.svg);
+        background-position: 100% 0,
+        4vw 94px, 
+        10.8vw 69px,
+        70.3vw 568px,
+        65.8vw 538px;
+        background-repeat: no-repeat;
     }
 
     .header__box{
@@ -83,6 +98,8 @@
 
     .standart-button{
         font-size: 0.67rem;
+        width: 285px;
+        height: 55px;
     }
 
     footer h3{
