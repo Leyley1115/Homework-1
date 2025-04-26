@@ -127,7 +127,7 @@ function equation(){
 function text(){
     while(true){
     let userText=prompt('Введите ваш текст:');
-    let regexp=new RegExp('^[а-яА-Я ]*$');
+    let regexp=new RegExp('^[a-zа-яА-Я ]*$');
 
     if (regexp.test(userText)){
 
@@ -178,8 +178,7 @@ function quiz(){
     let i = 0;
 
     for(let elementment of quiz){
-        alert(`${elementment.question} Варианты ответов: ${elementment.options}`);
-        let answer=prompt('Введите ответ')
+        let answer=prompt(`${elementment.question} \nВарианты ответов: ${elementment.options}`)
         if (answer.includes(elementment.correctAnswer)){
             i++
         }
