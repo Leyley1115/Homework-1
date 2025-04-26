@@ -120,3 +120,73 @@ function equation(){
             }
         }
     }
+
+
+// #3
+
+function text(){
+    while(true){
+    let userText=prompt('Введите ваш текст:');
+    let regexp=new RegExp('^[а-яА-Я ]*$');
+
+    if (regexp.test(userText)){
+
+        function reverseWords(userText) {
+            userText = userText.split(" ");
+            let res = [];
+    
+            for (let i = 0; i < userText.length; i++){
+                res.push(userText[i].split("").reverse().join(""));  
+            }  
+    
+            return res.join(" ");
+          }
+          
+          alert(reverseWords(userText));
+        break
+        }
+
+    else if (userText==undefined){
+        break
+    }
+
+    else{
+        alert('Были введены не буквенные символы.')
+        }
+    }
+}
+
+// №4
+function quiz(){
+    const quiz = [
+        {
+            question: "Какой цвет небо?",
+            options: ["1. Красный", "2. Синий", "3. Зеленый"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько дней в неделе?",
+            options: ["1. Шесть", "2. Семь", "3. Восемь"],
+            correctAnswer: 2
+        },
+        {
+            question: "Сколько у человека пальцев на одной руке?",
+            options: ["1. Четыре", "2. Пять", "3. Шесть"],
+            correctAnswer: 2
+        }
+    ];
+    let i = 0;
+
+    for(let elementment of quiz){
+        alert(`${elementment.question} Варианты ответов: ${elementment.options}`);
+        let answer=prompt('Введите ответ')
+        if (answer.includes(elementment.correctAnswer)){
+            i++
+        }
+        
+        else{
+            i = i;
+        }
+    }
+    alert(`Число верных ответов: ${i}`)
+}

@@ -9,37 +9,39 @@ for(let i=0; i<a.length; i++){
 // №2
 console.log('Задание 2');
 
-for(let i=0; i<a.length; i++){
-    if(a[i]==4){
-        console.log(`Индекс 4: ${i}`);
-        break;
-    }
-}
+// for(let i=0; i<a.length; i++){
+//     if(a[i]==4){
+//         console.log(`Индекс 4: ${i}`);
+//         break;
+//     }
+// }
+console.log(`Индекс 4: ${a.indexOf(4)}`);
 
 // №3
 console.log('Задание 3');
 
 let b=[1, 3, 5, 10, 20];
-b = b.join(' ');
-console.log(b);
+console.log(b.join(' '));
 
 // №4
 console.log('Задание 4');
 
-let m=[];
-let k=[];
-const el=1;
+let multiArray=[];
+let innerArray=[];
+const rows = 3;
+const cols = 3;
+const defaultValue=1;
 
-for(let i=0; i<3; i++){
-    k[i]=[];
-    m.unshift(k[i]);
+for(let i=0; i<rows; i++){
+    innerArray[i]=[];
+    multiArray.push(innerArray[i]);
 
-    for(let j=0; j<3; j++){
-        k[i].unshift(el);
+    for(let j=0; j<cols; j++){
+        innerArray[i].push(defaultValue);
     }
 }
 
-console.log(m)
+console.log(multiArray)
 
 // №5
 console.log('Задание 5');
@@ -56,42 +58,48 @@ j.sort();
 j.pop()
 console.log(j)
 
-// // №7
-// console.log('Задание 7');
+// №7
+console.log('Задание 7');
 
-// j=[9, 8, 7, 6, 5];
+j=[9, 8, 7, 6, 5];
 
-// while(true){
-//     let ask=prompt('Введите число от 0 до 10');
+while(true){
+    let ask=prompt('Введите число от 0 до 10');
 
-//     if ( (j.includes(Number(ask)))==true){
-//         alert('Угадал');
-//         break
-//     }
+    if (j.includes(Number(ask))){
+        alert('Угадал');
+        break
+    }
 
-//     else if (ask==undefined){
-//         break
-//     }
+    else if (ask==undefined){
+        break
+    }
 
-//     else{
-//         alert('Не угадал')
-//     }
-// }
+    else if (isNaN(Number(ask))){
+        alert('Вы ввели не числовое значение');
+    }
+
+    else{
+        alert('Не угадал')
+    }
+}
 
 // #8
 console.log('Задание 8');
 
-j='abcdef';
-j=j.split("");
-j.reverse();
-j=j.join('');
+str8='abcdef';
+str8=str8.split("").reverse().join('');
 console.log(j);
 
 // #9
 console.log('Задание 9');
 
 j=[[1, 2, 3],[4, 5, 6]];
-j=[...j[0], ...j[1]]
+j=[...j[0], ...j[1]];
+console.log(j);
+        // or
+j=[[1, 2, 3],[4, 5, 6]];
+j=j.flat();
 console.log(j);
 
 // #10
@@ -154,7 +162,7 @@ console.log(chet(j))
 console.log('Задание 15');
 
 j=[];
-for(let i=0; i<3; i++){
+for(let i=0; i<6; i++){
     let r=Math.floor(Math.random()*10+1);
     j.unshift(r);
 }
