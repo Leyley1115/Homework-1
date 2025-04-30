@@ -187,7 +187,26 @@ function quiz(){
             i = i;
         }
     }
-    alert(`Число верных ответов: ${i}`)
+    alert(`Число верных ответов: ${i}`);
+}
+
+// №5
+function one_third(){
+    const vars=["Бумага", "Камень", "Ножницы"];
+    compVar=vars[Math.floor(Math.random()*3)];
+    let userVar = prompt('Напишите цифру вашего варианта: \n1-Бумага\n2-Камень\n3-Ножницы')
+
+    if ((userVar-1)<vars.indexOf(compVar) && userVar != 1 || userVar==1 && vars.indexOf(compVar)==1 || userVar==3 && vars.indexOf(compVar)==0){
+        alert(`Компьютер выбрал: ${compVar},\nВы выбрали: ${vars[userVar-1]}.\nРезультат: Вы победили`);
+    }
+
+    else if((userVar-1)==vars.indexOf(compVar)){
+        alert(`Компьютер выбрал: ${compVar},\nВы выбрали: ${vars[userVar-1]}.\nРезультат: Ничья`);
+    }
+
+    else{
+        alert(`Компьютер выбрал: ${compVar},\nВы выбрали: ${vars[userVar-1]}.\nРезультат: Вы проиграли`);
+    }
 }
 
 // 5
