@@ -42,17 +42,17 @@ function isPositive(num) {
     
     console.log(filter(human, isMale));
 
-// // #3
-// console.log('Задание 3')
+// #3
+console.log('Задание 3')
 
-// const intervalId=setInterval(() => {
-//     console.log(new Date());
-// }, 3* 1000);
+const intervalId=setInterval(() => {
+    console.log(new Date());
+}, 3* 1000);
 
-// setTimeout(() => {
-// clearInterval(intervalId);
-// console.log('30 секунд прошло');
-// }, 30*1000);
+setTimeout(() => {
+clearInterval(intervalId);
+console.log('30 секунд прошло');
+}, 30*1000);
 
 // #4
 console.log('Задание 4')
@@ -64,18 +64,18 @@ delayForSecond(function () {
    console.log('Привет, Глеб!');
 })
 
-// // #5
-// console.log('Задание 5')
+// #5
+console.log('Задание 5')
 
-// function delayForSecond(cb) {
-//     setTimeout(() => {
-//         console.log('Прошла одна секунда');
-//         if(cb) { cb(); }
-//     }, 1000);
-// }
+function delayForSecond(cb) {
+    setTimeout(() => {
+        console.log('Прошла одна секунда');
+        if(cb) { cb(); }
+    }, 1000);
+}
 
-// function sayHi(name){
-//     console.log(`Привет, ${name}!`);
-// }
+function sayHi(name){
+    console.log(`Привет, ${name}!`);
+}
 
-// delayForSecond(() => sayHi('Глеб'));
+delayForSecond(() => sayHi('Глеб'));

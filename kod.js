@@ -187,17 +187,17 @@ function quiz(){
             i = i;
         }
     }
-    alert(`Число верных ответов: ${i}`)
+    alert(`Число верных ответов: ${i}`);
 }
 
-// 5
+// №5
 function one_third(){
     const vars=["Бумага", "Камень", "Ножницы"];
     compVar=vars[Math.floor(Math.random()*3)];
     let userVar = prompt('Напишите цифру вашего варианта: \n1-Бумага\n2-Камень\n3-Ножницы')
 
-    if (userVar==undefined || userVar<1 || userVar>3){
-        alert('Данные не введены или введены неверно');
+    if (userVar==undefined || userVar<1 || userVar>3 || isNaN(userVar)){
+        alert('Вы ввели некорректные данные или оставили поле пустым')
     }
 
     else if ((userVar-1)<vars.indexOf(compVar) && userVar != 1 || userVar==1 && vars.indexOf(compVar)==1 || userVar==3 && vars.indexOf(compVar)==0){
