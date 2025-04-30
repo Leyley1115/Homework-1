@@ -196,7 +196,11 @@ function one_third(){
     compVar=vars[Math.floor(Math.random()*3)];
     let userVar = prompt('Напишите цифру вашего варианта: \n1-Бумага\n2-Камень\n3-Ножницы')
 
-    if ((userVar-1)<vars.indexOf(compVar) && userVar != 1 || userVar==1 && vars.indexOf(compVar)==1 || userVar==3 && vars.indexOf(compVar)==0){
+    if (userVar==undefined || userVar<1 || userVar>3){
+        alert('Данные не введены или введены неверно');
+    }
+
+    else if ((userVar-1)<vars.indexOf(compVar) && userVar != 1 || userVar==1 && vars.indexOf(compVar)==1 || userVar==3 && vars.indexOf(compVar)==0){
         alert(`Компьютер выбрал: ${compVar},\nВы выбрали: ${vars[userVar-1]}.\nРезультат: Вы победили`);
     }
 
