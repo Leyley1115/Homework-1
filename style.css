@@ -6,6 +6,7 @@
 
 html {
   font-size: 24px;
+  scroll-behavior: smooth;
 }
 
 a {
@@ -18,6 +19,14 @@ a {
   padding-right: calc(50% - 600px);
 }
 
+@keyframes scroll-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translate(-202%);
+  }
+}
 .header {
   display: flex;
   position: relative;
@@ -27,6 +36,7 @@ a {
   background-image: url(img/stars/star_group.svg), url(img/stars/Star\ 2.svg), url(img/stars/Star\ 3.svg), url(img/stars/Star\ 4.svg), url(img/stars/Star\ 5.svg);
   background-position: 60vw -334px, 4vw 94px, 10.8vw 69px, 70.3vw 568px, 65.8vw 538px;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .header__box {
   padding-top: 196px;
@@ -46,13 +56,18 @@ a {
 }
 .header__topics {
   display: flex;
-  width: 100%;
-  overflow: hidden;
-  height: 90px;
-  background-color: rgb(188, 236, 48);
-  position: absolute;
-  bottom: 0;
+  animation: scroll-left 20s linear infinite;
+  animation-direction: normal;
   align-items: center;
+  position: relative;
+  bottom: -27%;
+}
+.header__topics-line {
+  position: absolute;
+  background-color: rgb(188, 236, 48);
+  height: 90px;
+  max-width: 100%;
+  bottom: 0;
 }
 .header__topic {
   display: inline;
@@ -137,8 +152,8 @@ a {
   max-width: 376px;
 }
 .about-card img {
+  aspect-ratio: 1x0 0.84;
   max-width: 100%;
-  height: 314px;
 }
 .about-card:hover {
   transform: scale(1.1);
@@ -243,6 +258,45 @@ footer h3 {
   font-weight: 600;
 }
 
+@media (min-width: 768px) and (max-width: 1012px) {
+  html {
+    width: 100%;
+  }
+  .center {
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+  .about__menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+    justify-items: center;
+    gap: 32px;
+    align-items: start;
+  }
+  .cards h3, .header__topic {
+    font-size: calc(0.3rem + 2vw);
+  }
+  .main-title, .header__title {
+    font-size: calc(1rem + 2.5vw);
+  }
+  .main-subtitle p {
+    font-size: calc(3px + 2vw);
+  }
+  .mini-games__content h3 {
+    font-size: calc(0.8rem + 2vw);
+  }
+  .img-overflow {
+    position: relative;
+    border-radius: 30px;
+    width: 400px;
+    height: 500px;
+    overflow: hidden;
+  }
+  .img-overflow img {
+    position: absolute;
+    right: -50%;
+  }
+}
 @media (max-width: 767px) {
   body {
     width: 100%;
@@ -256,6 +310,17 @@ footer h3 {
     background-image: url(img/stars/mobile_star.svg), url(img/stars/Star\ 2.svg), url(img/stars/Star\ 3.svg), url(img/stars/Star\ 4.svg), url(img/stars/Star\ 5.svg);
     background-position: 100% 0, 4vw 94px, 10.8vw 69px, 70.3vw 568px, 65.8vw 538px;
     background-repeat: no-repeat;
+  }
+  .header__topic {
+    font-size: 0.67rem;
+    background-size: 10%;
+    padding-right: 27.4px;
+  }
+  .header__topic:not(:first-child) {
+    padding-left: 47.14px;
+  }
+  .header__topics-line {
+    height: 51px;
   }
   .header__box {
     width: 100%;

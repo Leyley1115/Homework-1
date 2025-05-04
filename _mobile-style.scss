@@ -17,6 +17,20 @@
         70.3vw 568px,
         65.8vw 538px;
         background-repeat: no-repeat;
+
+        &__topic{
+            font-size: 0.67rem;
+            background-size: 10%;
+            padding-right: 27.4px;
+
+            &:not(:first-child){
+            padding-left: 47.14px;
+            }
+
+            &s-line{
+                height: 51px;
+            }
+        }
     }
 
     .header__box{

@@ -1,3 +1,39 @@
-@media(min-width: 768px) and (max-width: 1024px) {
-    
+@media(min-width: 768px) and (max-width: 1012px) {
+    html{
+        width: 100%;
+    }
+    .center{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+
+    .cards h3, .header__topic{
+        font-size: calc(0.3rem + 2vw);
+    }
+
+    .main-title, .header__title{
+        font-size: calc(1rem + 2.5vw);
+    }
+
+    .main-subtitle p{
+        font-size: calc(3px + 2vw);
+    }
+
+    .mini-games__content h3{
+        font-size: calc(0.8rem + 2vw)
+    }
+
+    .img-overflow{
+        position: relative;
+        border-radius: 30px;
+        width: 400px;
+        height: 500px;
+        overflow: hidden;
+
+        & img{
+        position: absolute;
+        right: -50%;
+        }
+    }
+
 }
