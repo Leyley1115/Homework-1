@@ -56,8 +56,9 @@ a {
 }
 .header__topics {
   display: flex;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 10s linear infinite;
   animation-direction: normal;
+  animation-iteration-count: infinite;
   align-items: center;
   position: relative;
   bottom: -27%;
@@ -265,13 +266,6 @@ footer h3 {
   .center {
     padding-left: 40px;
     padding-right: 40px;
-  }
-  .about__menu {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
-    justify-items: center;
-    gap: 32px;
-    align-items: start;
   }
   .cards h3, .header__topic {
     font-size: calc(0.3rem + 2vw);

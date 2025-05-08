@@ -21,7 +21,7 @@ a{
 
 @keyframes scroll-left{
     from {transform: translateX(0);}
-    to{transform: translate(-202%);}
+    to {transform: translate(-202%);}
 };
 
 .header{
@@ -61,8 +61,9 @@ a{
 
     &__topics{
         display: flex;
-        animation: scroll-left 20s linear infinite;
+        animation: scroll-left 10s linear infinite;
         animation-direction: normal;
+        animation-iteration-count: infinite;
 
         align-items: center;
         position: relative;

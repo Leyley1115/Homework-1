@@ -129,7 +129,11 @@ function text(){
     let userText=prompt('Введите ваш текст:');
     let regexp=new RegExp('^[a-zа-яА-Я ]*$');
 
-    if (regexp.test(userText)){
+    if (userText==undefined){
+        break
+    }
+
+    else if (regexp.test(userText)){
 
         function reverseWords(userText) {
             userText = userText.split(" ");
@@ -146,12 +150,9 @@ function text(){
         break
         }
 
-    else if (userText==undefined){
-        break
-    }
-
     else{
-        alert('Были введены не буквенные символы.')
+        alert('Были введены не буквенные символы.');
+        break
         }
     }
 }
@@ -220,8 +221,7 @@ function change_color(){
     for(let i=0; i<6; i++){
         let colorNumb=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 'A', 'B', 'C', 'D', 'E', 'F',];
         colorCode.push(colorNumb[Math.floor(Math.random()*16)]);
-        
     }
 
-    document.querySelector('.main_color').style.backgroundColor=`#${colorCode.join('')}`;
+    document.querySelector('.main').style.backgroundColor=`#${colorCode.join('')}`;
 }
