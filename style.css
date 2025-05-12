@@ -307,11 +307,11 @@ footer h3 {
   }
   .header__topic {
     font-size: 0.67rem;
-    background-size: 10%;
     padding-right: 27.4px;
   }
   .header__topic:not(:first-child) {
     padding-left: 47.14px;
+    background-size: 19px 19px;
   }
   .header__topics-line {
     height: 51px;
